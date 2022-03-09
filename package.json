@@ -1,0 +1,35 @@
+{
+  "name": "jest-puppeteer-tests",
+  "version": "1.0.0",
+  "description": "example of the tests",
+  "main": "index.js",
+  "author": "rvakazov",
+  "license": "MIT",
+  "scripts": {
+    "pretest": "rm -rf allure-results && rm -rf allure-report && yarn upgrade puppeteer",
+    "run-test": "jest",
+    "test": "npm-run-all run-test allure_run --continue-on-error",
+    "allure_run": "yarn allure generate allure-results --clean -o allure-report && yarn allure open allure-report",
+    "allure_gen": "yarn allure generate allure-results --clean -o allure-report"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "jest": "^27.5.1",
+    "jest-allure": "^0.1.3",
+    "jest-puppeteer": "^6.1.0",
+    "npm-run-all": "^4.1.5",
+    "puppeteer": "^13.5.0",
+    "search-params": "^4.0.1",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/jest-environment-puppeteer": "^5.0.0",
+    "@types/node": "^17.0.21",
+    "@types/uuid": "^8.3.4",
+    "allure-commandline": "^2.17.2"
+  }
+}

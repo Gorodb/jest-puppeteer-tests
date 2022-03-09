@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "sourceMap": true,
+    "types": [
+      "@types/jest",
+      "@types/node",
+      "jest-puppeteer",
+      "@types/allure-js-commons",
+      "@types/jest-environment-puppeteer",
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
