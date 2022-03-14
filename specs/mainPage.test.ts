@@ -20,7 +20,7 @@ describe('Contact book', () => {
   })
 
   // this test will fail because on the page text should be equal "Книга контактов" without 1 in the end
-  testTry('should display "Книга контактов" text on page', async () => {
+  testTry('should display "Книга контактов 1" text on page', async () => {
     reporter.severity(Severity.Normal);
     reporter.description('This test is example of failed test');
 
