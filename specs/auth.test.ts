@@ -92,6 +92,10 @@ describe(`Example test`, () => {
     await AuthPage.inputPassword(password.toString())
     reporter.endStep();
 
+    reporter.startStep('Submit');
+    await AuthPage.clickOnSubmitBtn()
+    reporter.endStep();
+
     reporter.startStep('Assert that user is logged out');
     await AuthPage.assertThatUserIsLoggedOut()
     reporter.endStep();

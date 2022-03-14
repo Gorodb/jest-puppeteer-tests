@@ -19,12 +19,13 @@ describe('Contact book', () => {
     reporter.endStep()
   })
 
+  // this test will fail because on the page text should be equal "Книга контактов" without 1 in the end
   testTry('should display "Книга контактов" text on page', async () => {
     reporter.severity(Severity.Normal);
     reporter.description('This test is example of failed test');
 
     reporter.startStep("assert text on the page")
-    await expect(page).toMatch('Книга контактов')
+    await expect(page).toMatch('Книга контактов 1')
     reporter.endStep()
   })
 })
